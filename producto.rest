@@ -1,0 +1,31 @@
+### 1. OBTENER TODOS LOS LIBROS (Para ver cuántos van)
+GET http://localhost:3000/api/libros
+
+### 2. CREAR UN LIBRO DIFERENTE (Para tener variedad en Letra Capital)
+POST http://localhost:3000/api/libros
+Content-Type: application/json
+
+{
+    "titulo": "1984",
+    "autor": "George Orwell",
+    "genero": "Distopía",
+    "anio": 1949,
+    "disponible": true
+}
+
+### 3. OBTENER UN LIBRO ESPECÍFICO
+# Usando el primer ID de tu lista real
+GET http://localhost:3000/api/libros/69d948bc5a23a76d4722767b
+
+### 4. ACTUALIZAR DISPONIBILIDAD (A "Prestado")
+# Usando el segundo ID de tu lista
+PUT http://localhost:3000/api/libros/69d94b105a23a76d4722767d
+Content-Type: application/json
+
+{
+    "disponible": false
+}
+
+### 5. ELIMINAR UN DUPLICADO
+# Usando el tercer ID de tu lista para ir limpiando
+DELETE http://localhost:3000/api/libros/69d94b115a23a76d4722767e
